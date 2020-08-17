@@ -10,4 +10,5 @@ db.sqlite3
 
 *.exe
 geckodriver.log
-
+jangov1/
+cpfiles.bat
