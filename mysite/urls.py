@@ -18,10 +18,13 @@ from django.urls import path,include
 from lists import views
 
 
+
+
 urlpatterns = [
     path('admin/', admin.site.urls),
-    # path('', include('blog.urls'))
+    path('', include('blog.urls')),
+    path('cv/', include('cv.urls')),
     # path('', include('lists.urls'))
     # path(r'^$', views.home_page, name='home'),
-    path(r'', views.home_page, name='home'),
+    # path(r'', views.home_page, name='home'),
 ]

@@ -1,13 +1,14 @@
+
+
 h1 a, h2 a{
     color: #FF8833;
     font-family: 'Lobster';
 }
-/* body {
-    padding-left: 15px;
-} */
+body {
+}
 
 .page-header {
-    background-color: #C25100;
+    background-color: #63c7e9;
     margin-top: 0;
     padding: 20px 20px 20px 40px;
 }
@@ -27,7 +28,7 @@ h1, h2, h3, h4 {
 }
 
 .date {
-    color: #828282;
+    color: #4e4e4e;
 }
 
 .save {
@@ -51,4 +52,20 @@ h1, h2, h3, h4 {
 
 .post h2 a, .post h2 a:visited {
     color: #000000;
+}
+
+
+body {
+    background-color: #A6A6A6;
+}
+
+
+.cv_title{
+    font-size: large;
+    font-weight: bolder;
+}
+
+#base_info{
+    font-size: large;
+    font-weight: bolder;
 }

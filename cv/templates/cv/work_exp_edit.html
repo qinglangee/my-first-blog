@@ -1,0 +1,9 @@
+{% extends 'cv/base.html' %}
+
+{% block content %}
+    <h2>New workexp</h2>
+    <form method="POST" class="post-form">{% csrf_token %}
+        {{ form.as_p }}
+        <button id="submit" type="submit" class="save btn btn-default">Save</button>
+    </form>
+{% endblock %}

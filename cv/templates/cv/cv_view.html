@@ -1,0 +1,49 @@
+{% extends 'cv/base.html' %}
+
+{% block content %}
+    <table id="base_info">
+        <tr>
+            <td>Name:</td>
+            <td>JamsBang</td>
+        </tr>
+        <tr>
+            <td>Birth:</td>
+            <td>2000-02</td>
+        </tr>
+        <tr>
+            <td>Telephone:</td>
+            <td>01882 652349</td>
+        </tr>
+        <tr>
+            <td>Mobile:</td>
+            <td>07717 121824</td>
+        </tr>
+        <tr>
+            <td>Email:</td>
+            <td>jamsbang2000@somemail.com</td>
+        </tr>
+    </table>
+    <div>
+        {% if user.is_authenticated %}
+        <a id="add_work_exp" href="{% url 'work_exp_new' %}" class="top-menu"><span class="glyphicon glyphicon-plus"></span></a>
+        {% endif %}
+        <h2 id="work_title">Work Experience </h2>
+        
+    </div>
+    {% for work_exp in work_exps %}
+    <div >
+        <div>
+            
+            {% if user.is_authenticated %}
+            <a class="btn btn-default" href="{% url 'work_exp_edit' pk=work_exp.pk %}"><span class="glyphicon glyphicon-pencil"></span></a>
+            {% endif %}
+            <p class="cv_title date">{{ work_exp.startTime }} - {{ work_exp.endTime }}</p>
+            <p class="cv_title">Company: {{ work_exp.company }}</p>
+            <p>{{ work_exp.desc }}</p>
+        </div>
+        <h2><a href="{% url 'work_exp_detail' pk=work_exp.pk %}">{{ workExp.company }}</a></h2>
+
+        <p>{{ post.desc|linebreaksbr }}</p>
+    </div>
+    {% endfor %}
+{% endblock %}

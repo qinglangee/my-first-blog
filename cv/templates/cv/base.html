@@ -1,21 +1,21 @@
 {% load static %}
 <html>
     <head>
-        <title>Django Girls blog</title>
+        <title>mycv view</title>
         <link href="//fonts.googleapis.com/css?family=Lobster&subset=latin,latin-ext" rel="stylesheet" type="text/css">
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
-        <link rel="stylesheet" href="{% static 'css/blog.css' %}">
+        <!-- <link rel="stylesheet" href="{% static 'css/blog.css' %}"> -->
+        <link rel="stylesheet" href="{% static 'css/cv.css' %}">
 
     </head>
     <body>
         <div class="page-header">
-            {% if user.is_authenticated %}
-            <a href="{% url 'post_new' %}" class="top-menu"><span class="glyphicon glyphicon-plus"></span></a>
-            {% endif %}
-            <h1><a href="/">Django Girls Blog 001</a></h1>
-            <h3><a id="mycv" href="/cv">To my cv</a></h3>
+            <h1><a href="/cv">mycv view</a></h1>
+            
+            <h3><a id="myblog" href="/">To my blog</a></h3>
         </div>
+        
         <div class="content container">
             <div class="row">
                 <div class="col-md-8">
